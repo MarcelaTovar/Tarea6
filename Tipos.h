@@ -5,18 +5,18 @@
 #include "MiClase.h"
 using namespace std;
 
-inline void aumento(int& valorIncial, int suma, Pila <int>& pilas, size_t i) {
+inline void aumento(int& valorIncial, int suma, Pila <int>& pilas, int i) {
 	pilas.insertar(((valorIncial += suma) - 1));
 }
-inline void aumento(double& valorInicial, double suma, Pila<double>& p, const size_t tamn) {
+inline void aumento(double& valorInicial, double suma, Pila<double>& p, int tamn) {
 	p.insertar(((valorInicial += suma) - 1.1));
 }
-inline void aumento(string& valorInicial, string valorIncrementado, Pila<string>& p, const size_t tamano) {
+inline void aumento(string& valorInicial, string valorIncrementado, Pila<string>& p, int tamano) {
 	string append = valorInicial + to_string(tamano);
 	p.insertar(append);
 	cout << append << " ";
 }
-inline void aumento(MiClase& valorIncial, MiClase valorIncremento, Pila<MiClase>& p, const size_t tamn) {
+inline void aumento(MiClase& valorIncial, MiClase valorIncremento, Pila<MiClase>& p, int tamn) {
 	string miClaseTemp = "MC" + to_string(tamn);
 	MiClase myClass = MiClase(miClaseTemp);
 	cout << miClaseTemp << " ";
